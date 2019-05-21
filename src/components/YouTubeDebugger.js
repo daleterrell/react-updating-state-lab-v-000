@@ -5,7 +5,7 @@ class YouTubeDebugger extends React.Component {
     super();
 
     this.state = {
-      errors: [],
+      errors: 0,
       user: null,
       settings: {
         bitrate: 8,
