@@ -1,11 +1,11 @@
-mport React from 'react';
+import React from 'react';
 
 class YouTubeDebugger extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      errors: 0,
+      errors: [],
       user: null,
       settings: {
         bitrate: 8,
@@ -35,6 +35,19 @@ class YouTubeDebugger extends React.Component {
         }
       }
     });
+
+    /*
+    Or this can be defined using the Object.assign method:
+    
+    this.setState({
+      settings: Object.assign({}, this.state.settings, {
+        video: Object.assign({}, this.state.settings.video, {
+          resolution: '720p'
+        })
+      })
+    });
+    
+    */
   };
 
   render() {
@@ -51,4 +64,4 @@ class YouTubeDebugger extends React.Component {
   }
 }
 
-export default YouTubeDebugger;// Code YouTubeDebugger Component Here
+export default YouTubeDebugger;
